@@ -1,0 +1,5 @@
+git clone
+git status
+git add --all
+git commit -m "next day or next file"
+git push
