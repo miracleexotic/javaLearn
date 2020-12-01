@@ -3,3 +3,7 @@ git status
 git add --all
 git commit -m "next day or next file"
 git push
+
+--- config ---
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
