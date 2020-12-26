@@ -28,15 +28,18 @@ public class Register {
         s[count++] = sub;
         System.out.println(student.getName() + " register " + sub.getSubname() +
                 " [" + sub.getSubMajor() + "] " + sub.getCredit() + " credit");
-        if(sub.getSubMajor().equalsIgnoreCase(student.getMajor())) {
-            totalPriceMajor += sub.getCredit() * 800;
-        } else {
-            totalPriceNonMajor += sub.getCredit() * 800;
-        }
     }
     
     public double getTotalPrice() {
-        System.out.println(Arrays.toString(s));
+        for (Subject sub : s) {
+            if(sub != null) {
+                if(sub.getSubMajor().equalsIgnoreCase(student.getMajor())) {
+                    totalPriceMajor += sub.getCredit() * 800;
+                } else {
+                    totalPriceNonMajor += sub.getCredit() * 800;
+                }
+            }
+        }
         return totalPriceNonMajor;
     }
     
