@@ -6,8 +6,7 @@ public class Register {
     private Student student;
     private Subject s[] = new Subject[10];
     private int count = 0;
-    private double totalPriceMajor = 0;
-    private double totalPriceNonMajor = 0;
+    private double[] pri = {0, 0};
     
     public Register() {
     }
@@ -31,20 +30,25 @@ public class Register {
     }
     
     public double getTotalPrice() {
+        this.pri[0] = this.pri[1] = 0;
         for (Subject sub : s) {
             if(sub != null) {
                 if(sub.getSubMajor().equalsIgnoreCase(student.getMajor())) {
-                    totalPriceMajor += sub.getCredit() * 800;
+                    // System.out.println(sub.getSubMajor() + "=" + student.getMajor());
+                    this.pri[0] += sub.getCredit() * 800;
+                    // System.out.println(getTotalPriceMajor());
                 } else {
-                    totalPriceNonMajor += sub.getCredit() * 800;
+                    // System.out.println(sub.getSubMajor() + "=" + student.getMajor());
+                    this.pri[1] += sub.getCredit() * 800;
                 }
             }
         }
-        return totalPriceNonMajor;
+        return this.pri[1];
     }
     
     public double getScholarship() {
-        return totalPriceMajor;
+        getTotalPrice();
+        return this.pri[0];
     }
     
 }
