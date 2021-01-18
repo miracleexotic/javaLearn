@@ -1,5 +1,6 @@
 {
     "files.exclude": {
         "**/*.class": true
-    }
+    },
+    "workbench.colorTheme": "Community Material Theme Darker"
 }
