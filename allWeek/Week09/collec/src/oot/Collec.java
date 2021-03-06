@@ -11,7 +11,11 @@ public class Collec {
 //        coll04();
 //        coll05();
 //        coll06();
-        coll07();
+        // coll07();
+        ArrayList<Student> arr = new ArrayList<>(); 
+        arr.add(new Student());
+        arr.add(new Student());
+        System.out.println(arr);
     }
     
     public static void coll01() { // Boxing and Unboxing
@@ -73,7 +77,7 @@ public class Collec {
         System.out.println(h);
         
         ArrayList a = new ArrayList(); // ArrayList contain HashSet
-        a.add(h);
+        a.addAll(h);
         System.out.println(a);
     }
     

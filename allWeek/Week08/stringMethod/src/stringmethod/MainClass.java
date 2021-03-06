@@ -17,14 +17,14 @@ public class MainClass {
 
 //        findHLASCII();
 //        string01();
-//        string02();
+        string02();
 //        string03();
 //        string04();
 //        string05();
 //        string06();
 //        string07();
 //        exe4();
-        string08();
+//        string08();
 
     }
 
